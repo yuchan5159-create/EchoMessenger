@@ -19,8 +19,14 @@ namespace EchoMessenger
             listBox1.Items.Add(typed_msg);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
 
         }
     }

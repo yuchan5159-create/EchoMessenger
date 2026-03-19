@@ -78,11 +78,13 @@
             button1.TabIndex = 4;
             button1.Text = "전 송";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(listBox1);
