@@ -34,6 +34,7 @@
             textBox1 = new TextBox();
             listBox1 = new ListBox();
             button1 = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -80,6 +81,16 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(230, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 5;
+            label2.Text = "label2";
+            label2.Click += label2_Click;
+            // 
             // Form1
             // 
             AcceptButton = button1;
@@ -87,6 +98,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(listBox1);
             Controls.Add(textBox1);
@@ -105,5 +117,6 @@
         private TextBox textBox1;
         private ListBox listBox1;
         private Button button1;
+        private Label label2;
     }
 }

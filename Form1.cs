@@ -23,6 +23,7 @@ namespace EchoMessenger
             if (string.IsNullOrWhiteSpace(typed_msg))
                 return;
             listBox1.Items.Add($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}");
+            label2.Text = $"메시지: {listBox1.Items.Count}개";
             textBox1.Clear();
             textBox1.Focus();
         }
@@ -40,12 +41,21 @@ namespace EchoMessenger
             string.IsNullOrWhiteSpace("   ");      // true
             string.IsNullOrWhiteSpace("abc");      // false
 
-            { string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            {
+                string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string msg = "Hello";
-                string result = time + " " + msg; }
-            { string msg = "Hello";
-                string result = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}"; }
+                string result = time + " " + msg;
+            }
+            {
+                string msg = "Hello";
+                string result = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}";
+            }
 
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
