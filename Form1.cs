@@ -22,6 +22,11 @@ namespace EchoMessenger
             string typed_msg = textBox1.Text.Trim();
             if (string.IsNullOrWhiteSpace(typed_msg))
                 return;
+            if (typed_msg.Length > 50)
+            {
+                MessageBox.Show("경고! 글자수 50자를 초과했습니다!", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             listBox1.Items.Add($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}");
             label2.Text = $"메시지: {listBox1.Items.Count}개";
             textBox1.Clear();
