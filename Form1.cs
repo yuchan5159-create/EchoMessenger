@@ -14,14 +14,15 @@ namespace EchoMessenger
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string typed_msg;
-            typed_msg = textBox1.Text;
-            listBox1.Items.Add(typed_msg);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string typed_msg = textBox1.Text;
+            listBox1.Items.Add(typed_msg);
             textBox1.Clear();
+            textBox1.Focus();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,5 +30,10 @@ namespace EchoMessenger
 
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+}       
