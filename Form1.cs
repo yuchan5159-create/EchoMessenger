@@ -73,6 +73,12 @@ namespace EchoMessenger
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            label2.Text = $"메시지: {listBox1.Items.Count}개";
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
             string msg = "   Hello   ";

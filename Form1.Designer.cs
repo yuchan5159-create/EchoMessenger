@@ -36,6 +36,8 @@
             listBox1 = new ListBox();
             button1 = new Button();
             label2 = new Label();
+            button2 = new Button();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -43,12 +45,12 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(113, 28);
+            contextMenuStrip1.Size = new Size(109, 28);
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(112, 24);
+            deleteToolStripMenuItem.Size = new Size(108, 24);
             deleteToolStripMenuItem.Text = "삭제";
             deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -102,6 +104,16 @@
             label2.Text = "label2";
             label2.Click += label2_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(490, 13);
+            button2.Name = "button2";
+            button2.Size = new Size(130, 29);
+            button2.TabIndex = 6;
+            button2.Text = "대화 기록 삭제";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AcceptButton = button1;
@@ -109,6 +121,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(listBox1);
@@ -117,6 +130,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,5 +144,6 @@
         private ListBox listBox1;
         private Button button1;
         private Label label2;
+        private Button button2;
     }
 }
