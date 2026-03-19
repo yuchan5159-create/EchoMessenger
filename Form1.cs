@@ -28,6 +28,15 @@ namespace EchoMessenger
             textBox1.Focus();
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                label2.Text = $"메시지: {listBox1.Items.Count}개";
+            }
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

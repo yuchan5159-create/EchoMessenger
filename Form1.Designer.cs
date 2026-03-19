@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             textBox1 = new TextBox();
             listBox1 = new ListBox();
@@ -40,8 +41,16 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            contextMenuStrip1.Size = new Size(113, 28);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(112, 24);
+            deleteToolStripMenuItem.Text = "삭제";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // label1
             // 
@@ -64,12 +73,14 @@
             // 
             // listBox1
             // 
+            listBox1.ContextMenuStrip = contextMenuStrip1;
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(23, 55);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(597, 284);
             listBox1.TabIndex = 3;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listBox1.MouseDown += listBox1_MouseDown;
             // 
             // button1
             // 
@@ -113,6 +124,7 @@
         #endregion
 
         private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
         private Label label1;
         private TextBox textBox1;
         private ListBox listBox1;
