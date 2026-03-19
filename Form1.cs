@@ -56,7 +56,8 @@ namespace EchoMessenger
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            string msg = "   Hello   ";
+            string result = msg.Trim();
         }
     }
 }       
