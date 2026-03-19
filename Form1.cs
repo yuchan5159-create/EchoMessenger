@@ -20,6 +20,8 @@ namespace EchoMessenger
         private void button1_Click(object sender, EventArgs e)
         {
             string typed_msg = textBox1.Text;
+            if (string.IsNullOrWhiteSpace(typed_msg))
+                return;
             listBox1.Items.Add(typed_msg);
             textBox1.Clear();
             textBox1.Focus();
@@ -33,6 +35,10 @@ namespace EchoMessenger
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string.IsNullOrWhiteSpace(null);    // true
+            string.IsNullOrWhiteSpace(" ");     // true
+            string.IsNullOrWhiteSpace("   ");      // true
+            string.IsNullOrWhiteSpace("abc");      // false
 
         }
     }
