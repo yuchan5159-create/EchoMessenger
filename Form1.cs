@@ -22,7 +22,7 @@ namespace EchoMessenger
             string typed_msg = textBox1.Text;
             if (string.IsNullOrWhiteSpace(typed_msg))
                 return;
-            listBox1.Items.Add(typed_msg);
+            listBox1.Items.Add($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}");
             textBox1.Clear();
             textBox1.Focus();
         }
@@ -39,6 +39,13 @@ namespace EchoMessenger
             string.IsNullOrWhiteSpace(" ");     // true
             string.IsNullOrWhiteSpace("   ");      // true
             string.IsNullOrWhiteSpace("abc");      // false
+
+            { string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                string msg = "Hello";
+                string result = time + " " + msg; }
+            { string msg = "Hello";
+                string result = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}"; }
+
 
         }
     }
