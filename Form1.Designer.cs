@@ -59,7 +59,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(450, 27);
             textBox1.TabIndex = 2;
-            textBox1.Text = "text box";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // listBox1
             // 
@@ -68,6 +68,7 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(597, 284);
             listBox1.TabIndex = 3;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // button1
             // 
