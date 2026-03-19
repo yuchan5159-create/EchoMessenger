@@ -19,7 +19,7 @@ namespace EchoMessenger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string typed_msg = textBox1.Text;
+            string typed_msg = textBox1.Text.Trim();
             if (string.IsNullOrWhiteSpace(typed_msg))
                 return;
             listBox1.Items.Add($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}");
@@ -58,6 +58,8 @@ namespace EchoMessenger
         {
             string msg = "   Hello   ";
             string result = msg.Trim();
+
+            
         }
     }
-}       
+}      
