@@ -37,6 +37,16 @@ namespace EchoMessenger
             }
         }
 
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int index = listBox1.IndexFromPoint(e.Location);
+                if (index != ListBox.NoMatches)
+                    listBox1.SelectedIndex = index;
+            }
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
