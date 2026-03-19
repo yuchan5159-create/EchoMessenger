@@ -29,11 +29,76 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            label1 = new Label();
+            textBox1 = new TextBox();
+            listBox1 = new ListBox();
+            button1 = new Button();
+            SuspendLayout();
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(235, 41);
+            label1.TabIndex = 1;
+            label1.Text = "Echo MEssenger";
+            label1.Click += label1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(23, 375);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(450, 27);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "text box";
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(23, 55);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(597, 284);
+            listBox1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(489, 375);
+            button1.Name = "button1";
+            button1.Size = new Size(131, 29);
+            button1.TabIndex = 4;
+            button1.Text = "전 송";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(listBox1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ContextMenuStrip contextMenuStrip1;
+        private Label label1;
+        private TextBox textBox1;
+        private ListBox listBox1;
+        private Button button1;
     }
 }
