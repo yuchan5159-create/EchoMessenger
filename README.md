@@ -1,4 +1,15 @@
-(C# 코딩) 에코 메신저
+#(C# 코딩) 에코 메신저
+
+##개요
+-C# 프로그래밍 학습
+
+-1줄 소개: TEXT를 입력 받아 처리하는 메신저 같은 프로그램
+
+-사용한 컨트롤: laber1, TextBox, list Box, button
+
+-사용한플랫폼: -C#, .NET Windows Forms, Visual Studio, GitHub
+
+
 
 과제 1
 <img width="847" height="517" alt="3주차 사진 1" src="https://github.com/user-attachments/assets/d6a6073f-7450-4d13-af62-56530e39e981" />
